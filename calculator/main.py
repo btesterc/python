@@ -35,6 +35,9 @@ def calculate():
       print(i)
     
     operation_type = input("pick the operation you wanted.")
+    if operation_type not in operations:
+      print("please choose a correct operator")
+      continue   
     num2 = float(input("what is the second number: "))
     calculation_function = operations[operation_type]
     answer = calculation_function(num1, num2) 
@@ -43,11 +46,13 @@ def calculate():
     
     if cont == "y":
       num1 = answer
+   
     elif cont == "n":
       calculate_over = True
       calculate()
     else:
       print("please print 'y' or 'n' ")
+       
       
 calculate()
 
