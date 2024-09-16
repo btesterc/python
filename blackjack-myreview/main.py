@@ -55,6 +55,43 @@ while play_game:
          total_value2 -= 10
     print(f"    Your cards {user_cards}, total score is {total_value2} ")
     print(f"    Computer first card is {com_cards[0]} ")  
+
+    card_or_pass2 = input("Type 'y' to get another card, type 'n' to pass:")
+    
+    if card_or_pass2 == "y":
+      f = random.choice(cards)
+      user_cards.append(f)
+      total_value2 +=  user_cards[3]
+      if total_value2 > 21:
+        if user_cards.count(11) == True:
+          total_value2 -= 10
+      print(f"    Your cards {user_cards}, total score is {total_value2} ")
+      print(f"    Computer first card is {com_cards[0]} ")   
+        
+    elif card_or_pass2 == "n":
+      print(f"    Your final hand: {user_cards} , final score: {total_value2} ")
+      print(f"    Computer's final hand: {com_cards} , final score: {total_value} ")
+    if total_value2 > 21 and total_value >21 :
+      print ("Both went over. DRAFT.")
+    if total_value2 > 21:
+      if total_value <= 21:
+        print("You went over. You Lost.")
+    elif total_value2 <= 21:
+      if total_value > 21:
+        print("Computer went over. You Win.")
+      elif total_value <= 21:
+        if total_value2 == total_value:
+          print("Equal numbers. DRAFT")
+        elif total_value2 > total_value:
+          print("You Win")
+        else:
+          print("You lost")
+    play_game3 = input("Do you want to play a game of Blackjack? Type 'y' or 'n':")  
+    if play_game3 == "y":
+      play_game = True
+    elif play_game3 == "n":
+      print ("see you later")
+      play_game = False
     
   elif card_or_pass1 == "n":
     print(f"    Your final hand: {user_cards} , final score: {total_value2} ")
@@ -80,45 +117,9 @@ while play_game:
     elif play_game2 == "n":
       print ("see you later")
       play_game = False
-      break
     
       
-  card_or_pass2 = input("Type 'y' to get another card, type 'n' to pass:")
-    
-  if card_or_pass2 == "y":
-    f = random.choice(cards)
-    user_cards.append(f)
-    total_value2 +=  user_cards[3]
-    if total_value2 > 21:
-       if user_cards.count(11) == True:
-         total_value2 -= 10
-    print(f"    Your cards {user_cards}, total score is {total_value2} ")
-    print(f"    Computer first card is {com_cards[0]} ")   
-      
-  elif card_or_pass2 == "n":
-    print(f"    Your final hand: {user_cards} , final score: {total_value2} ")
-    print(f"    Computer's final hand: {com_cards} , final score: {total_value} ")
-  if total_value2 > 21 and total_value >21 :
-    print ("Both went over. DRAFT.")
-  if total_value2 > 21:
-    if total_value <= 21:
-      print("You went over. You Lost.")
-  elif total_value2 <= 21:
-    if total_value > 21:
-      print("Computer went over. You Win.")
-    elif total_value <= 21:
-      if total_value2 == total_value:
-        print("Equal numbers. DRAFT")
-      elif total_value2 > total_value:
-        print("You Win")
-      else:
-        print("You lost")
-  play_game3 = input("Do you want to play a game of Blackjack? Type 'y' or 'n':")  
-  if play_game3 == "y":
-    play_game = True
-  elif play_game3 == "n":
-    print ("see you later")
-    play_game = False
+ 
 
 
 
