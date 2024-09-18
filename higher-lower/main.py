@@ -1,7 +1,7 @@
 import art
 import random
 import game_data
-from replit import clear
+import os
 
 print(art.logo)
 number = len(game_data.data)
@@ -18,7 +18,7 @@ Game_over = False
 
 while not Game_over:
 
-  clear()
+  os.system('clear')
   print( f"Compare A: {A['name']},  {A['description']},  {A['country']}.") 
   if score > 0:
     print(f"You're right! Current score: {score}.")
@@ -26,7 +26,7 @@ while not Game_over:
   print(f"Compare B: {B['name']},  {B['description']},  {B['country']}.")
   answer = input ("Who has more followers? Type 'A' or 'B':").lower()
   
-  if answer == "A":
+  if answer == "a":
     if A['follower_count'] < B['follower_count']:      
       Game_over = True
     elif A['follower_count'] > B['follower_count']:
@@ -34,7 +34,7 @@ while not Game_over:
       A = B
       B = game_data.data[random.randint(0,number)]
             
-  elif answer == "B":
+  elif answer == "b":
     if B['follower_count'] < A['follower_count']:
       Game_over = True
     elif B['follower_count'] > A['follower_count'] :
