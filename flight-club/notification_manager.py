@@ -1,13 +1,13 @@
 import smtplib
 from twilio.rest import Client
 
-TWILIO_SID = "AC8dbae08d0abcb6704ece4b9a4b73303f"
-TWILIO_AUTH_TOKEN = "80bfc037ce0b40a4a9c3c569819ea693"
-TWILIO_VIRTUAL_NUMBER = "+16822975132"
-TWILIO_VERIFIED_NUMBER = "+41779513941"
-MAIL_PROVIDER_SMTP_ADDRESS ="smtp.gmail.com"
-MY_EMAIL = "brkclk.ch@gmail.com"
-MY_PASSWORD = "kxlwpkzdlwwvlmmb"
+TWILIO_SID = "***"
+TWILIO_AUTH_TOKEN = "***"
+TWILIO_VIRTUAL_NUMBER = "***"
+TWILIO_VERIFIED_NUMBER = "***"
+MAIL_PROVIDER_SMTP_ADDRESS ="***"
+MY_EMAIL = "***"
+MY_PASSWORD = "***"
 
 class NotificationManager:
 

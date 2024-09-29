@@ -1,8 +1,8 @@
 from pprint import pprint
 import requests
 
-SHEETY_PRICES_ENDPOINT = ***
-SHEETY_USERS_ENDPOINT = ***
+SHEETY_PRICES_ENDPOINT = "***"
+SHEETY_USERS_ENDPOINT = "***"
 
 
 class DataManager():
